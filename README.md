@@ -3,7 +3,7 @@
 This repository contains the projects done in the context of the "Introduction of Computational Intelligence" course held at the Ferdowsi University of Mashhad(FUM). During the semester, we were assigned three projects as follows:
 
 1. [Clustering](#proj1-clustering)
-
+2. [Perceptron + Kernel trick](#proj2-perceptron--kernel-trick)
 
 ## Proj1: Clustering
 We were supposed to work with [ORL dataset](!https://www.kaggle.com/datasets/tavarez/the-orl-database-for-training-and-testing). We should easily flatten the images and then fit the clustering algorithms with them. We were asked to work with `DBSCAN`, `K-means`, and `Agglomerative` algorithms. I experimented with three different data normalizations before feeding them to the algorithms, as follows:
@@ -35,3 +35,39 @@ During my experience of finding optimal parameters for this assignment, I faced 
 </p>
 
 *!!! Please note that you can also find brief documentation (written in Persian) for this assignment, in the corresponding directory of this project!*
+
+
+
+## Proj2: Perceptron + Kernel trick
+*Yes, the title may seem a little weird at first, but stay tuned!!!*
+
+In this project, we were supposed to predict the amount of passengers' **satisfaction** with the airline. We were given [this dataset](!https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction?select=train.csv) including test and train `CSV` formatted files. Each file contains various information such as the passenger's age or travel class and the target was to predict the value of the last column, **satisfaction**.
+
+We were asked to firstly apply the `Perceptron` and `SVM` algorithms on the data and inspect the results. 
+
+<p align="center">
+<img src="./figures/svm_and_perceptron_results.png" width=50%>
+</p>
+
+However, since `Perceptron` doesn't work well with non-linear separable data, we had to propose a solution for it... So we used `Perceptron` with ***kernel trick***! Taken from [here](!https://datamites.com/blog/support-vector-machine-algorithm-svm-understanding-kernel-trick/#:~:text=A%20Kernel%20Trick%20is%20a,Lagrangian%20formula%20using%20Lagrangian%20multipliers.%20), Kernel Trick is:
+> A simple method where a Non Linear data is projected onto a higher dimension space so as to make it easier to classify the data where it could be linearly divided by a plane
+
+The following figure, which is taken from [here](!https://www.researchgate.net/publication/340618118_Multi-stage_Jamming_Attacks_Detection_using_Deep_Learning_Combined_with_Kernelized_Support_Vector_Machine_in_5G_Cloud_Radio_Access_Networks), intuitively shows this trick well!
+
+<p align="center">
+<img src="./figures/kernel_trick_example.jpeg" width=50%>
+</p>
+
+As a suggestion to the inability of the `Perceptron` algorithm 
+to classify the *nonlinearly separable* data, I replaced the basic multiplication (`weights*features`) with the kernel trick. I used four following kernels:
+
+* Linear
+* Polynomial
+* Gaussian
+* RBF
+
+<p align="center">
+<img src="./figures/perceptron_with_kernel_results.png" width=50%>
+</p>
+
+As can be seen in the above figure, by replacing the conventional multiplication with the kernel multiplication, the performance of the `Perceptron` algorithm could be improved! I also believe that by spending more time on tuning the parameters of kernels such as `sigma` and `coef`, the results will be even more encouraging!
