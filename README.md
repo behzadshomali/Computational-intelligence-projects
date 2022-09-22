@@ -75,7 +75,7 @@ As can be seen in the above figure, by replacing the conventional multiplication
 
 
 ## Word2Vec + BoG
-This project was jointly done by me and my teammate, Kiana Kiani. In this project, we were asked to solve the problem of the Bag of Words (`BoG`) method, which considered similar words separately, with the help of the `Word2Vec` method. We had to train and test our solution with this dataset, containing users' comments on **Reddit** as well as the corresponding category of the comments (target).
+This project was jointly done by me and my teammate, Zahra Kiani. In this project, we were asked to solve the problem of the Bag of Words (`BoG`) method, which considered similar words separately, with the help of the `Word2Vec` method. We had to train and test our solution with this dataset, containing users' comments on **Reddit** as well as the corresponding category of the comments (target).
 
 <p align="center">
 <img src="./figures/reddit_dataset_example.png" width=75%>
@@ -111,7 +111,7 @@ By having the tokens and this model, we should easily get the vector representat
 ## Cluster
 To remedy the issue of considering words with the same meaning independent of each other, we kind of needed to present all of the words with the same meaning with a single label/representation.
 
-As one section of our project, we were asked to implement the clustering approach proposed in *Data Clustering Based On Key Identification* ([paper](!http://jsdp.rcisp.ac.ir/article-1-529-en.html)). The main portion of the paper's implementation was done by Kiana Kiani. However, since our implementation was ***sequential*** it took a long time to run with big data, like ours. Hence, we replaced it with the `Agglomerative` clustering approach.
+As one section of our project, we were asked to implement the clustering approach proposed in *Data Clustering Based On Key Identification* ([paper](!http://jsdp.rcisp.ac.ir/article-1-529-en.html)). The main portion of the paper's implementation was done by Zahra Kiani. However, since our implementation was ***sequential*** it took a long time to run with big data, like ours. Hence, we replaced it with the `Agglomerative` clustering approach.
 
 After applying the clustering, a total 15,107 number of words were assigned to 5147 clusters, i.e., on average, each cluster contained 2.7 tokens.
 
