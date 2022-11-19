@@ -7,7 +7,7 @@ This repository contains the projects done in the context of the "Introduction o
 3. [Word2Vec + BoG](#word2vec--bog)
 
 ## Proj1: Clustering
-We were supposed to work with [ORL dataset](!https://www.kaggle.com/datasets/tavarez/the-orl-database-for-training-and-testing). We should easily flatten the images and then fit the clustering algorithms with them. We were asked to work with `DBSCAN`, `K-means`, and `Agglomerative` algorithms. I experimented with three different data normalizations before feeding them to the algorithms, as follows:
+We were supposed to work with [ORL dataset](https://www.kaggle.com/datasets/tavarez/the-orl-database-for-training-and-testing). We should easily flatten the images and then fit the clustering algorithms with them. We were asked to work with `DBSCAN`, `K-means`, and `Agglomerative` algorithms. I experimented with three different data normalizations before feeding them to the algorithms, as follows:
 
 * **None:** no normalization has been applied to the data
 * **StandardScaler:** normalize data to have *mean* of 0 and *std* of 1
@@ -42,7 +42,7 @@ During my experience of finding optimal parameters for this assignment, I faced 
 ## Proj2: Perceptron + Kernel trick
 *Yes, the title may seem a little weird at first, but stay tuned!!!*
 
-In this project, we were supposed to predict the amount of passengers' **satisfaction** with the airline. We were given [this dataset](!https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction?select=train.csv) including test and train `CSV` formatted files. Each file contains various information such as the passenger's age or travel class and the target was to predict the value of the last column, **satisfaction**.
+In this project, we were supposed to predict the amount of passengers' **satisfaction** with the airline. We were given [this dataset](https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction?select=train.csv) including test and train `CSV` formatted files. Each file contains various information such as the passenger's age or travel class and the target was to predict the value of the last column, **satisfaction**.
 
 We were asked to firstly apply the `Perceptron` and `SVM` algorithms on the data and inspect the results. 
 
@@ -50,10 +50,10 @@ We were asked to firstly apply the `Perceptron` and `SVM` algorithms on the data
 <img src="./figures/svm_and_perceptron_results.png" width=75%>
 </p>
 
-However, since `Perceptron` doesn't work well with non-linear separable data, we had to propose a solution for it... So we used `Perceptron` with ***kernel trick***! Taken from [here](!https://datamites.com/blog/support-vector-machine-algorithm-svm-understanding-kernel-trick/#:~:text=A%20Kernel%20Trick%20is%20a,Lagrangian%20formula%20using%20Lagrangian%20multipliers.%20), Kernel Trick is:
+However, since `Perceptron` doesn't work well with non-linear separable data, we had to propose a solution for it... So we used `Perceptron` with ***kernel trick***! Taken from [here](https://datamites.com/blog/support-vector-machine-algorithm-svm-understanding-kernel-trick/#:~:text=A%20Kernel%20Trick%20is%20a,Lagrangian%20formula%20using%20Lagrangian%20multipliers.%20), Kernel Trick is:
 > A simple method where a Non Linear data is projected onto a higher dimension space so as to make it easier to classify the data where it could be linearly divided by a plane
 
-The following figure, which is taken from [here](!https://www.researchgate.net/publication/340618118_Multi-stage_Jamming_Attacks_Detection_using_Deep_Learning_Combined_with_Kernelized_Support_Vector_Machine_in_5G_Cloud_Radio_Access_Networks), intuitively shows this trick well!
+The following figure, which is taken from [here](https://www.researchgate.net/publication/340618118_Multi-stage_Jamming_Attacks_Detection_using_Deep_Learning_Combined_with_Kernelized_Support_Vector_Machine_in_5G_Cloud_Radio_Access_Networks), intuitively shows this trick well!
 
 <p align="center">
 <img src="./figures/kernel_trick_example.jpeg" width=50%>
